@@ -1,0 +1,345 @@
+@media only screen and (max-width: 1550px){
+
+    section.instruments.aos-init.aos-animate {
+        margin-top: -45px !important;
+    }
+    p {
+        font-size: 14px !important;
+    }
+}
+
+@media only screen and (max-width: 1440px){
+
+.navbar{ 
+    font-size: 13px !important;
+    display: flex !important;
+    justify-content:center !important  ; 
+}
+h2 {
+    font-size: 30px !important;
+}
+img.logo-brand {
+    width: 62%;
+}
+
+p.aboutustext {
+    font-size: 13px !important;
+}
+p.card-title {
+    font-size: 13px !important;
+}
+
+button.rdmore {
+    padding: 3px 24px 10px;
+    font-size: 12px;
+}
+p.card-text.lower {
+    font-size: 13px !important;
+}
+
+p.descrip {
+    background: #1828807d;
+    color: white;
+    /* padding: 28%; */
+    position: absolute;
+    top: 21.5%;
+    width: 100%;
+    left: 0;
+    transition: opacity 0.8s ease-in-out;
+    font-weight: 600;
+    font-size: 14px;
+    opacity: 0;
+    line-height: 1.5;
+    height: 78.5%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: stretch;
+}
+input {
+    font-size: 13px !important;
+}
+
+.col-sm-12.col-lg-6.text p {
+    font-size: 12px !important;
+
+}
+}
+@media only screen and (max-width: 1370px){
+    .teamimg {
+        display: flex;
+        justify-content: center;
+        width: 696px;
+        height: 444px;
+        object-fit: contain;
+    }
+
+    p {
+        font-size: 17px !important;
+    }  
+
+    .team .testimonial-item {
+        height: 822px !important;
+        width: 90% !important;
+        margin-left: 14px !important;
+    
+}
+
+.col-sm-4 {
+    flex: 0 0 auto;
+    width: 48.333333% !important;
+}
+.col-sm-12.col-lg-6.text p {
+    font-size: 17px !important;
+}
+.slide img {
+    width: 55%;
+    aspect-ratio: 2/2;
+    object-fit: contain;
+}
+.slide-track{
+    margin-left:14px !important;
+}
+
+
+
+p.aboutustext {
+    font-size: 18px !important;
+}
+
+a {
+    font-size: 18px;
+}
+
+img.logo-brand {
+    width: 80% !important;
+}
+
+}
+
+@media only screen and (max-width: 1280px){
+
+    .team .testimonial-item {
+        box-sizing: content-box;
+        min-height: 200px;
+        position: relative;
+        margin: 398px;
+        background-color: white;
+        background-color: #f1f1f1;
+        padding: 18px;
+    }
+
+    img.img.teamimg {
+        width: 100%;
+        object-fit: contain;
+        margin-bottom: -100px;
+        margin-top: 79px;
+    }
+
+    .testimonial-item {
+        margin: 0px !important;
+        top: 150px;
+        left: 0;
+    }
+
+    .col-lg-5.info {
+        margin-top: -43px;
+    }
+
+    section.instruments.aos-init.aos-animate {
+        margin-top: 90px !important;
+    }
+
+    .col-sm-4.col-sm-4.instrumentcard {
+        flex: 0 0 auto;
+        width: 73.333333% !important;
+      
+    }
+
+    p.descrip {
+        top: 9.8% !important;
+        height: 84.5% !important;
+    }    
+    .slick-track{
+        left: 1% !important;
+    }
+
+    .col-sm-12.contactform {
+        padding: 40px !important;
+        margin-left: 0px !important;
+    }
+    .team .testimonial-item {
+        height: 920px !important;
+    }
+    p.descrip {
+        top: 10.8% !important;
+        height: 89.3% !important;
+    }
+}
+
+
+@media only screen and (max-width:800px)
+{
+    .team .testimonial-item {
+        height: 920px !important;
+    }
+}
+
+
+
+
+
+@media only screen and (max-width: 768px){
+    img.logo-brand {
+        width: 48% !important;
+    }
+
+    button.burger-icon {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 24px !important;
+    }
+
+
+    .row.mt-5.aos-init.aos-animate {
+        margin-left: 0 !important;
+    }
+
+    p.card-title {
+        font-size: 16px !important;
+    }
+
+    img.img.teamimg {
+        width: 100% !important;
+        margin: 0px !important;
+        height: 50% !important;
+    }
+
+    .row.align-items-center {
+        margin-top: 55px;
+    }
+
+    .team .testimonial-item {
+        height: 1477px !important;
+        width: 90% !important;
+        margin-left: 0px !important;
+        top: 30px;
+    
+}
+
+.col-sm-4.col-sm-4.instrumentcard {
+    flex: 0 0 auto;
+    width: 90.333333% !important;
+   
+}
+
+p.descrip {
+    top: 13.8% !important;
+    height: 78.5% !important;
+    font-size: 11px !important;
+}
+section.clients.aos-init.aos-animate {
+    margin-bottom: 65px !important;
+}
+
+
+
+a {
+    font-size: 14px !important;
+    font-family: 'Poppins' !important;
+    font-weight: 500 !important;
+}
+
+p.aboutustext {
+    font-size: 13px !important;
+}
+
+p {
+    font-size: 13px !important;
+    margin-top: 0px !important;
+
+}
+
+.team .testimonial-item {
+    height: 1170px !important;
+
+}
+
+h3.headingtitle {
+    font-size: 25px !important;
+}
+
+section.instruments.aos-init.aos-animate {
+    margin-top: 1px !important;
+}
+
+h3 {
+    font-size: 14px !important;
+}
+
+.slide img {
+    width: 44%;
+    aspect-ratio: 2/2;
+    object-fit: contain;
+}
+.slick-track{
+    left: 5% !important;
+}
+
+.slide img {
+    width: 44%;
+    aspect-ratio: 2/2;
+    object-fit: contain;
+}
+
+.col-sm-12.col-lg-6.text p {
+    font-size: 14px !important;
+}
+h2 {
+    font-size: 30px !important;
+}
+
+.container {
+    top: -55px;
+}
+.row.gy-4.secondone {
+    margin-top: 19% !important;
+}
+
+.col-md-3.col-lg-3.col-xl-3.mx-auto.mt-3 p {
+    width: 342px;
+    text-align: center;
+    display: contents;
+
+}
+p.descrip {
+    top: 22% !important;
+    height: 78.5% !important;
+    font-size: 11px !important;
+}
+
+}
+
+section.ceo {
+    margin-bottom: 50px;
+}
+
+h5.ceo-title {
+    margin-left: 22px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+p.desg {
+    margin-left: 22px;
+    margin-top: 4px;
+    font-weight: 400;
+    color: cornflowerblue;
+}
+
+p.material-content {
+   
+    padding: 5px 20px;
+}
