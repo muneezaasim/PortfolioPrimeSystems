@@ -4,337 +4,587 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prime Systems - Services</title>
+  <title>Technical Services &amp; Protocols | Prime Systems</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Comprehensive pharmaceutical validation protocols: Cleanroom HVAC validation (ISO 14644), thermal mapping, autoclave qualification, equipment DQ/IQ/OQ/PQ, and compressed air/pure water utilities testing.">
+  <meta name="keywords"
+    content="HVAC validation, cleanroom smoke study, thermal mapping cold room, autoclave validation F0, pharma equipment qualification, purified water loop validation">
+  <meta name="author" content="Prime Systems">
+  <meta name="theme-color" content="#0b3cb8">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Technical Services &amp; Protocols | Prime Systems">
+  <meta property="og:description"
+    content="Complete pharmaceutical qualification and validation services complying with WHO, ISO, and cGMP standards.">
+  <meta property="og:image" content="./assets/img/hero-bg.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/img/image-Photoroom.png-Photoroom.png">
+
+  <!-- Google Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- AOS Animation -->
+  <!-- AOS (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Main CSS -->
-  <link href="main.css" rel="stylesheet">
-
-  <style>
-    /* Specific styles for Services page if needed */
-    .service-detail-card {
-      background: var(--bg-white);
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: var(--shadow-sm);
-      height: 100%;
-      border-left: 4px solid var(--primary-color);
-      transition: var(--transition);
-    }
-
-    .service-detail-card:hover {
-      box-shadow: var(--shadow-md);
-      transform: translateY(-5px);
-    }
-
-    .service-detail-card h4 {
-      margin-bottom: 15px;
-      font-weight: 700;
-      color: var(--text-dark);
-    }
-
-    .service-detail-card .icon {
-      font-size: 2rem;
-      color: var(--primary-color);
-      margin-bottom: 15px;
-    }
-
-    .feature-row {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 40px;
-      margin-bottom: 60px;
-      background: var(--bg-white);
-      padding: 30px;
-      border-radius: 15px;
-      box-shadow: var(--shadow-sm);
-    }
-
-    .feature-text {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .feature-img {
-      flex: 1;
-      min-width: 300px;
-    }
-
-    .image-stack {
-      position: relative;
-      height: 300px;
-    }
-
-    .stack-front,
-    .stack-back {
-      position: absolute;
-      border-radius: 10px;
-      box-shadow: var(--shadow-md);
-      object-fit: cover;
-    }
-
-    .stack-back {
-      width: 80%;
-      height: 80%;
-      top: 0;
-      right: 0;
-      opacity: 0.8;
-      z-index: 1;
-    }
-
-    .stack-front {
-      width: 80%;
-      height: 80%;
-      bottom: 0;
-      left: 0;
-      z-index: 2;
-      border: 3px solid #fff;
-    }
-  </style>
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-  <!-- Header (Same as Index) -->
+  <!-- Preloader with fail-safe -->
+  <div id="preloader">
+    <div class="spinner"></div>
+    <span
+      style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: var(--text-muted);">PRIME SYSTEMS</span>
+  </div>
+
+  <!-- Header Navigation -->
   <header>
-    <nav class="navbar sticky" style="background: var(--primary-color); position: relative;">
+    <nav class="navbar">
       <div class="container nav-container">
-        <a href="index.html" class="logo-link">
-          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems" class="logo-brand">
+        <a href="index.html" class="brand-logo" aria-label="Prime Systems Home">
+          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems Logo" class="logo-img">
         </a>
-        <button class="burger-icon" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
-        <div class="headerA">
-          <a href="index.html">Home</a>
-          <a href="index.html#about">About</a>
-          <a href="index.html#services">Services</a>
-          <a href="index.html#team">Team</a>
-          <a href="index.html#instruments">Instruments</a>
-          <a href="index.html#clients">Clients</a>
-          <a href="index.html#contact">Contact</a>
+
+        <!-- Desktop Menu -->
+        <div class="nav-menu">
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="index.html#about" class="nav-link">About Us</a>
+          <a href="Services.html" class="nav-link" style="color: var(--accent-cyan-light); font-weight: 700;">Services</a>
+          <a href="index.html#instruments" class="nav-link">Instruments</a>
+          <a href="index.html#clients" class="nav-link">Clients</a>
+          <a href="index.html#contact" class="nav-link">Contact</a>
+        </div>
+
+        <div class="nav-actions">
+          <a href="index.html#contact" class="btn btn-primary btn-sm">
+            <i class="bi bi-chat-text-fill"></i> Get in Touch
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Service Section 1: HVAC -->
-  <section class="section-padding" style="background: var(--bg-light);">
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems" class="drawer-logo">
+      <button class="drawer-close" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="index.html" class="drawer-link">Home <i class="bi bi-chevron-right"></i></a>
+      <a href="index.html#about" class="drawer-link">About Us <i class="bi bi-chevron-right"></i></a>
+      <a href="Services.html" class="drawer-link" style="color: var(--primary);">Services <i class="bi bi-chevron-right"></i></a>
+      <a href="index.html#instruments" class="drawer-link">Instruments <i class="bi bi-chevron-right"></i></a>
+      <a href="index.html#clients" class="drawer-link">Clients <i class="bi bi-chevron-right"></i></a>
+      <a href="index.html#contact" class="drawer-link">Contact Us <i class="bi bi-chevron-right"></i></a>
+    </nav>
+    <div style="margin-top: auto;">
+      <a href="index.html#contact" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;">
+        <i class="bi bi-telephone-fill"></i> Request Consultation
+      </a>
+      <div style="font-size: 0.88rem; color: var(--text-muted);">
+        <p><i class="bi bi-envelope me-2"></i> asim.hyderi@yahoo.com</p>
+        <p style="margin-top: 6px;"><i class="bi bi-phone me-2"></i> +92 300 260 8874</p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Services Hero Banner -->
+  <section class="services-hero">
+    <div class="container">
+      <nav class="breadcrumb-nav" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span style="color: var(--text-white); font-weight: 600;">Technical Services &amp; Protocols</span>
+      </nav>
+      <h1 data-aos="fade-up">
+        Pharmaceutical Qualification &amp; Validation Protocols
+      </h1>
+      <p data-aos="fade-up" data-aos-delay="100">
+        Audit-ready qualification packages, calibrated precision instrumentation, and rigorous field testing conforming
+        strictly to WHO TRS, ISO 14644, MCC, and cGMP international guidelines.
+      </p>
+    </div>
+  </section>
+
+  <!-- Sticky Secondary Sub-Nav -->
+  <nav class="services-subnav" aria-label="Services Navigation">
+    <div class="container">
+      <div class="subnav-pills">
+        <a href="#lifecycle" class="subnav-link">DQ-IQ-OQ-PQ Lifecycle</a>
+        <a href="#hvac" class="subnav-link">HVAC &amp; Cleanrooms</a>
+        <a href="#thermal" class="subnav-link">Thermal &amp; Mapping</a>
+        <a href="#pharma" class="subnav-link">Pharma Equipment</a>
+        <a href="#util" class="subnav-link">Critical Utilities</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Section 1: Qualification Lifecycle (DQ - IQ - OQ - PQ) -->
+  <section id="lifecycle" class="section-padding" style="background: var(--bg-surface);">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>HVAC / Environmental Validation</h2>
-        <p>We provide complete services for validation and qualification of HVAC systems and controlled environments to
-          comply with cGMP requirements.</p>
+        <div class="section-tag">
+          <i class="bi bi-diagram-3-fill"></i> Standardized Validation Process
+        </div>
+        <h2>The 4-Stage Qualification Lifecycle</h2>
+        <p>
+          Every piece of critical manufacturing equipment, utility system, and facility enclosure undergoes our structured four-tier qualification model to ensure complete audit compliance.
+        </p>
       </div>
 
-      <div class="instruments-grid"> <!-- Using grid from main.css -->
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="icon"><i class="bi-check2-circle"></i></div>
-          <h4>System Testing & Balancing</h4>
-          <p>Precise calibration and adjustment to ensure optimal performance of HVAC systems.</p>
+      <div class="lifecycle-grid">
+        <!-- Stage 1 -->
+        <div class="stage-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="stage-number">01</div>
+          <h3>Design Qualification (DQ)</h3>
+          <p>
+            Documentary evidence that the proposed design of facilities, systems, and equipment is suitable for the intended purpose and strictly adheres to cGMP, URS (User Requirement Specifications), and engineering standards.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon"><i class="bi-wrench"></i></div>
-          <h4>Room Pressure Differentials</h4>
-          <p>Setting up differential pressures to maintain cleanroom integrity and controlled environments.</p>
+
+        <!-- Stage 2 -->
+        <div class="stage-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="stage-number">02</div>
+          <h3>Installation Qualification (IQ)</h3>
+          <p>
+            Documented verification confirming that equipment, piping, electrical systems, and instrumentation are properly installed in compliance with approved design drawings, manufacturer manuals, and local regulatory codes.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="icon"><i class="bi-bar-chart"></i></div>
-          <h4>Air Flow Measurements</h4>
-          <p>Accurate assessment of air circulation rates and calculation of room air changes.</p>
+
+        <!-- Stage 3 -->
+        <div class="stage-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="stage-number">03</div>
+          <h3>Operational Qualification (OQ)</h3>
+          <p>
+            Systematic verification that equipment and utility systems operate across all specified operating ranges, challenge conditions, safety interlocks, alarm sequences, and critical control parameter limits.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon"><i class="bi-binoculars"></i></div>
-          <h4>Particle Counts</h4>
-          <p>Monitoring and analysis of airborne particle levels for cleanroom compliance.</p>
-        </div>
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="500">
-          <div class="icon"><i class="bi-brightness-high"></i></div>
-          <h4>Recovery Period Test</h4>
-          <p>Determination of Room Clean-up Rate and evaluating recovery time.</p>
-        </div>
-        <div class="service-detail-card" data-aos="fade-up" data-aos-delay="600">
-          <div class="icon"><i class="bi-graph-up"></i></div>
-          <h4>Air Flow Pattern Visualization</h4>
-          <p>Visualization techniques (smoke studies) to assess airflow patterns.</p>
+
+        <!-- Stage 4 -->
+        <div class="stage-card" data-aos="fade-up" data-aos-delay="400">
+          <div class="stage-number">04</div>
+          <h3>Performance Qualification (PQ)</h3>
+          <p>
+            Demonstrating through multiple consecutive production runs or simulated batch cycles that the system repeatedly and reproducibly produces output meeting all predetermined quality specifications.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Section 2: Thermal -->
-  <section id="thermal" class="section-padding">
+  <!-- Section 2: HVAC & Cleanroom Environmental Validation -->
+  <section id="hvac" class="section-padding" style="background: var(--bg-body);">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Thermal Validation & Mapping</h2>
-        <p>Complete services for thermal validation of sterilizers and temperature mapping of controlled areas.</p>
+        <div class="section-tag">
+          <i class="bi bi-wind"></i> ISO 14644 &amp; EU cGMP
+        </div>
+        <h2>HVAC &amp; Cleanroom Environmental Qualification</h2>
+        <p>
+          Complete verification of cleanroom airflow dynamics, contamination barrier integrity, and particulate control in compliance with ISO 14644-1/2/3 and WHO TRS requirements.
+        </p>
       </div>
 
-      <div class="instruments-grid">
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-check2-circle"></i></div>
-          <h4>Autoclaves & Sterilizers</h4>
-          <p>Validation of Autoclaves & Super-heated Water Sterilizers ensuring efficacy.</p>
+      <div class="detail-grid">
+        <!-- HVAC 1 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="detail-icon"><i class="bi bi-sliders"></i></div>
+          <h4>Air Balancing &amp; Volumetric Flow</h4>
+          <p>
+            Measuring supply, return, and exhaust airflow using calibrated capture hoods and duct traverse anemometry. Calculation of total Room Air Changes per Hour (ACPH) to ensure compliant air turnover.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-wrench"></i></div>
-          <h4>Ovens & Dry Heat</h4>
-          <p>Validation of Ovens & Dry Heat Sterilizers confirming consistent performance.</p>
+
+        <!-- HVAC 2 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="detail-icon"><i class="bi bi-shield-check"></i></div>
+          <h4>HEPA Filter Integrity (DOP/PAO Leak Test)</h4>
+          <p>
+            Upstream poly-dispersed aerosol challenge (PAO) and downstream scanning with calibrated aerosol photometers to detect media leaks, frame leaks, and gasket bypass exceeding 0.01% penetration.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-bar-chart"></i></div>
-          <h4>Sterilization Tunnels</h4>
-          <p>Validation of Sterilization & Drying Tunnels ensuring uniformity.</p>
+
+        <!-- HVAC 3 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="detail-icon"><i class="bi bi-arrow-left-right"></i></div>
+          <h4>Room Differential Pressure Regimes</h4>
+          <p>
+            Establishing and recording air cascades across positive and negative pressure cleanrooms using high-precision digital manometers to prevent cross-contamination between adjacent processing areas.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-brightness-high"></i></div>
-          <h4>Incubators & Refrigerators</h4>
-          <p>Thermal mapping of storage equipment for optimal conditions.</p>
+
+        <!-- HVAC 4 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="detail-icon"><i class="bi bi-dot"></i></div>
+          <h4>Airborne Particle Count Classification</h4>
+          <p>
+            Optical laser particle counters verify airborne particulate cleanliness under both "At-Rest" and "In-Operation" states for ISO Class 5 (Grade A), Class 6 (Grade B), Class 7 (Grade C), and Class 8 (Grade D).
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-snow"></i></div>
-          <h4>Cold Storage Rooms</h4>
-          <p>Qualification & Thermal Mapping of Cold Storage Rooms.</p>
+
+        <!-- HVAC 5 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="detail-icon"><i class="bi bi-camera-video"></i></div>
+          <h4>Airflow Pattern Visualization (Smoke Studies)</h4>
+          <p>
+            Aerodynamic flow visualization with cleanroom-grade fog generators and high-definition video recording to assess unidirectional laminar flow, turbulent eddys, and air sweeps across critical operator interfaces.
+          </p>
         </div>
-        <div class="service-detail-card" data-aos="fade-up">
-          <div class="icon"><i class="bi-shop"></i></div>
-          <h4>Warehouses</h4>
-          <p>Systematic thermal mapping of large warehouse facilities.</p>
+
+        <!-- HVAC 6 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="detail-icon"><i class="bi bi-stopwatch"></i></div>
+          <h4>Cleanroom Recovery Period Test</h4>
+          <p>
+            Deliberately seeding the room with a 100x particulate contamination spike and precisely measuring the elapsed time required to return to baseline ISO cleanliness (verifying 15-20 min clean-up rate).
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Section 3: Pharma Equipment -->
-  <section id="pharma" class="section-padding" style="background: var(--bg-light);">
+  <!-- Section 3: Thermal Validation & Temperature Mapping -->
+  <section id="thermal" class="section-padding" style="background: var(--bg-surface);">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Pharma Equipment Validation</h2>
-        <p>DQ, IQ, OQ, PQ services for pharmaceutical production equipment.</p>
+        <div class="section-tag">
+          <i class="bi bi-thermometer-half"></i> Thermal Efficacy &amp; Sterilization
+        </div>
+        <h2>Thermal Validation &amp; Temperature Mapping</h2>
+        <p>
+          Critical verification of thermal kinetics, lethality calculations (F<sub>0</sub> / F<sub>H</sub> values), and temperature distribution in sterilization and storage equipment.
+        </p>
       </div>
 
-      <div class="services-grid">
-        <div class="service-card" data-aos="fade-up" style="text-align: center; padding: 30px;">
-          <h4 style="color: var(--primary-color);">Design Qualification (DQ)</h4>
-          <p>Ensuring design meets requirements and standards.</p>
+      <div class="detail-grid">
+        <!-- Therm 1 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="detail-icon"><i class="bi bi-fire"></i></div>
+          <h4>Autoclaves &amp; Steam Sterilizers</h4>
+          <p>
+            Multi-channel thermocouple thermal profiling verifying heat distribution and heat penetration under empty and maximum loaded conditions. Automatic calculation of lethality accumulation (F<sub>0</sub> &ge; 15 mins).
+          </p>
         </div>
-        <div class="service-card" data-aos="fade-up" style="text-align: center; padding: 30px;">
-          <h4 style="color: var(--primary-color);">Installation Qualification (IQ)</h4>
-          <p>Verifying correct installation per specifications.</p>
+
+        <!-- Therm 2 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="detail-icon"><i class="bi bi-funnel"></i></div>
+          <h4>Dry Heat Ovens &amp; Sterilizing Tunnels</h4>
+          <p>
+            Verifying temperature uniformity at 250&ndash;350&deg;C. Heat penetration studies paired with endotoxin challenge testing (pyrogen reduction verification exceeding a 3-log reduction).
+          </p>
         </div>
-        <div class="service-card" data-aos="fade-up" style="text-align: center; padding: 30px;">
-          <h4 style="color: var(--primary-color);">Operational Qualification (OQ)</h4>
-          <p>Testing operational performance under various conditions.</p>
+
+        <!-- Therm 3 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="detail-icon"><i class="bi bi-snow"></i></div>
+          <h4>Cold Storage Rooms (2&ndash;8&deg;C) &amp; Deep Freezers</h4>
+          <p>
+            Comprehensive multi-point mapping verifying thermal gradients, hot/cold spots, door-opening recovery times, and insulation hold during emergency power failure conditions.
+          </p>
         </div>
-        <div class="service-card" data-aos="fade-up" style="text-align: center; padding: 30px;">
-          <h4 style="color: var(--primary-color);">Performance Qualification (PQ)</h4>
-          <p>Assessing consistent product quality and suitability.</p>
+
+        <!-- Therm 4 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="detail-icon"><i class="bi bi-boxes"></i></div>
+          <h4>Systematic Warehouse Temperature Mapping</h4>
+          <p>
+            Seasonal (summer and winter) 3D spatial mapping of raw material and finished goods warehouses using calibrated dataloggers to identify ambient climate exposure risks and fan circulation dead zones.
+          </p>
+        </div>
+
+        <!-- Therm 5 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="detail-icon"><i class="bi bi-cpu"></i></div>
+          <h4>Stability Chambers &amp; Incubators</h4>
+          <p>
+            Mapping temperature and relative humidity (% RH) stability in ICH accelerated and long-term testing chambers to ensure total compliance with ICH Q1A guidelines.
+          </p>
+        </div>
+
+        <!-- Therm 6 -->
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="detail-icon"><i class="bi bi-truck"></i></div>
+          <h4>Refrigerated Transport &amp; Cold Boxes</h4>
+          <p>
+            Thermal distribution and insulation validation of cold chain delivery vehicles, insulated shippers, and active refrigerated containers under real transit stress scenarios.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Section 4: Utilities -->
-  <section id="util" class="section-padding">
+  <!-- Section 4: Pharma Production Equipment Qualification -->
+  <section id="pharma" class="section-padding" style="background: var(--bg-body);">
     <div class="container">
       <div class="section-header" data-aos="fade-up">
-        <h2>Utilities Validation</h2>
-        <p>Validation services for critical utility systems.</p>
+        <div class="section-tag">
+          <i class="bi bi-gear-wide-connected"></i> Machinery Qualification
+        </div>
+        <h2>Pharmaceutical Production Equipment Qualification</h2>
+        <p>
+          Custom DQ, IQ, OQ, and PQ protocol generation and field execution for primary and secondary pharmaceutical processing machinery.
+        </p>
+      </div>
+
+      <div class="detail-grid">
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="detail-icon"><i class="bi bi-pie-chart"></i></div>
+          <h4>Granulation &amp; Blending Equipment</h4>
+          <p>
+            Qualification of High-Shear Mixer Granulators (HSMG), Fluid Bed Dryers (FBD), Double Cone Blenders, and Octagonal Blenders. Blend uniformity testing and drying cycle repeatability verification.
+          </p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="150">
+          <div class="detail-icon"><i class="bi bi-circle"></i></div>
+          <h4>Tableting &amp; Tablet Compression Presses</h4>
+          <p>
+            Speed challenge tests, feeder dynamics, tablet weight uniformity, thickness, and hardness consistency verification across rotary tablet compression machines.
+          </p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="detail-icon"><i class="bi bi-droplet"></i></div>
+          <h4>Sterile Liquid &amp; Aseptic Filling Lines</h4>
+          <p>
+            Aseptic vial washing, sterilization, filling, stoppering, and capping lines. Fill volume accuracy, dosing pump repeatability, and particulate control checks.
+          </p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="250">
+          <div class="detail-icon"><i class="bi bi-capsule"></i></div>
+          <h4>Capsule Filling &amp; Inspection Machinery</h4>
+          <p>
+            Automatic capsule filling machines: weight variation testing, powder tamping pressure verification, and visual capsule inspection system calibration.
+          </p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="300">
+          <div class="detail-icon"><i class="bi bi-box-seam"></i></div>
+          <h4>Blister Packing &amp; Strip Sealing Lines</h4>
+          <p>
+            Forming temperature profiling, sealing roller pressure verification, leak detection testing (methylene blue bath), and vision inspection rejection verification.
+          </p>
+        </div>
+
+        <div class="detail-card" data-aos="fade-up" data-aos-delay="350">
+          <div class="detail-icon"><i class="bi bi-qr-code-scan"></i></div>
+          <h4>Serialization &amp; Secondary Packaging</h4>
+          <p>
+            Cartoning machines, checkweighers, 2D matrix barcode track-and-trace serialization systems, and automated tamper-evident labeling machinery.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section 5: Critical Utilities Validation -->
+  <section id="util" class="section-padding" style="background: var(--bg-surface);">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">
+          <i class="bi bi-moisture"></i> High-Purity Utilities
+        </div>
+        <h2>Critical Utilities Qualification</h2>
+        <p>
+          Validation protocols safeguarding direct product-contact utilities in strict compliance with pharmacopeial and ISO standards.
+        </p>
       </div>
 
       <!-- Feature 1: Compressed Air -->
-      <div class="feature-row" data-aos="fade-up">
-        <div class="feature-text">
-          <h3>Compressed Air Systems</h3>
-          <p>Thorough validation ensures the integrity and reliability of compressed air systems, verifying compliance
-            with regulatory standards. We assess system design, installation, operation, and performance.</p>
+      <div class="utility-feature-row" data-aos="fade-up">
+        <div class="utility-content">
+          <span class="section-tag" style="margin-bottom: 12px;">ISO 8573 Compliance</span>
+          <h3>Compressed Air Systems Validation</h3>
+          <p>
+            In pharmaceutical operations, compressed air comes into direct contact with finished dosage forms and sterile containers. We validate system purity, pipework integrity, and filtration efficacy across all points of use.
+          </p>
+          <ul class="card-highlights" style="margin-bottom: 24px;">
+            <li><i class="bi bi-check2"></i> Non-viable airborne particle classification per ISO 8573-1</li>
+            <li><i class="bi bi-check2"></i> Pressure dew point measurement for moisture/water vapor content</li>
+            <li><i class="bi bi-check2"></i> Residual total oil aerosol and vapor detection</li>
+            <li><i class="bi bi-check2"></i> Point-of-use sterile filter integrity verification</li>
+          </ul>
         </div>
-        <div class="feature-img">
-          <div class="image-stack">
-            <img src="./assets/services/compressedair.jpg" alt="Compressed Air" class="stack-front"
-              style="height: 100%; width: 100%; border:none; position:relative;">
-          </div>
+        <div class="utility-img-box">
+          <img src="./assets/services/compressedair.webp" alt="Compressed Air System Validation" loading="lazy">
         </div>
       </div>
 
-      <!-- Feature 2: Boiler -->
-      <div class="feature-row" data-aos="fade-up">
-        <div class="feature-img">
-          <img src="./assets/services/boiler.png" class="img-fluid" alt="Boiler">
+      <!-- Feature 2: Boiler & Clean Steam -->
+      <div class="utility-feature-row reverse" data-aos="fade-up">
+        <div class="utility-content">
+          <span class="section-tag" style="margin-bottom: 12px;">HTM 2010 &amp; EN 285</span>
+          <h3>Boiler &amp; Pure Steam Systems</h3>
+          <p>
+            Pure steam is critical for sterilizers, CIP/SIP operations, and cleanroom humidification. Our qualification protocols examine physical steam quality and generator efficiency to prevent wet packs or superheat failures.
+          </p>
+          <ul class="card-highlights" style="margin-bottom: 24px;">
+            <li><i class="bi bi-check2"></i> Non-condensable gas measurement (&lt; 3.5% of total volume)</li>
+            <li><i class="bi bi-check2"></i> Superheat value measurement (&lt; 25&deg;C above saturation)</li>
+            <li><i class="bi bi-check2"></i> Steam dryness fraction determination (&gt; 0.9 or &gt; 0.95)</li>
+            <li><i class="bi bi-check2"></i> Steam condensate chemical and endotoxin sampling</li>
+          </ul>
         </div>
-        <div class="feature-text">
-          <h3>Boiler and Steam Systems</h3>
-          <p>Our protocols cover every aspect of boiler and steam systems. Through rigorous testing, we validate the
-            efficiency, reliability, and safety of these essential systems.</p>
+        <div class="utility-img-box">
+          <img src="./assets/services/boiler.webp" alt="Boiler and Clean Steam Validation" loading="lazy">
         </div>
       </div>
 
       <!-- Feature 3: Purified Water -->
-      <div class="feature-row" data-aos="fade-up">
-        <div class="feature-text">
-          <h3>Purified Water Systems</h3>
-          <p>Validation for purified water systems encompassing DQ, IQ, OQ, and PQ phases. We ensure consistent
-            production of high-quality water meeting stringent regulatory requirements.</p>
+      <div class="utility-feature-row" data-aos="fade-up">
+        <div class="utility-content">
+          <span class="section-tag" style="margin-bottom: 12px;">USP &amp; EP Standards</span>
+          <h3>Purified Water &amp; WFI Generation Loops</h3>
+          <p>
+            Complete multi-phase validation (Phase I, II, III) for Purified Water generation (RO/EDI) and continuous recirculation distribution loops ensuring water quality meets stringent pharmacopeial monographs.
+          </p>
+          <ul class="card-highlights" style="margin-bottom: 24px;">
+            <li><i class="bi bi-check2"></i> DQ, IQ, OQ, and PQ generation protocols</li>
+            <li><i class="bi bi-check2"></i> Conductivity, Total Organic Carbon (TOC), and pH verification</li>
+            <li><i class="bi bi-check2"></i> Distribution loop flow velocity (&gt; 1.5 m/s) and dead-leg compliance (3D rule)</li>
+            <li><i class="bi bi-check2"></i> Multi-week microbiological sampling and bioburden qualification</li>
+          </ul>
         </div>
-        <div class="feature-img">
-          <div class="image-stack">
-            <img src="./assets/services/purified.png" alt="Purified Water" class="stack-front"
-              style="height: 100%; width: 100%; border:none; position:relative;">
+        <div class="utility-img-box">
+          <img src="./assets/services/purified.webp" alt="Purified Water Loop Validation" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Audit-Readiness Callout Banner -->
+  <section class="section-padding" style="background: linear-gradient(135deg, #071333 0%, #0b2a75 100%); color: #fff; text-align: center;">
+    <div class="container" data-aos="zoom-in">
+      <div style="max-width: 800px; margin: 0 auto;">
+        <span class="section-tag tag-dark" style="margin-bottom: 20px;">
+          <i class="bi bi-award-fill"></i> Inspection Ready
+        </span>
+        <h2 style="font-size: 2.8rem; font-weight: 800; color: #fff; margin-bottom: 20px;">
+          Preparing for an Upcoming Regulatory Audit?
+        </h2>
+        <p style="font-size: 1.15rem; color: rgba(255, 255, 255, 0.85); line-height: 1.7; margin-bottom: 36px;">
+          From routine re-validation during scheduled shutdowns to comprehensive gap analysis for international audits, our senior engineers provide the documentation and calibration backing you need.
+        </p>
+        <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+          <a href="index.html#contact" class="btn btn-primary" style="background: #fff; color: var(--primary);">
+            <i class="bi bi-calendar-check-fill"></i> Schedule a Technical Consultation
+          </a>
+          <a href="tel:+923002608874" class="btn btn-glass">
+            <i class="bi bi-telephone-fill"></i> +92 300 260 8874
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer (Synchronized with index.html) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems Logo" class="logo-img">
+          <p class="footer-desc">
+            Your dedicated technical services provider for pharmaceutical manufacturing since 2004. Specializing in
+            cleanroom environmental validation, thermal mapping, equipment qualification, and utilities testing.
+          </p>
+          <div style="color: var(--accent-cyan-light); font-weight: 700; font-size: 0.92rem;">
+            Committed to Quality &amp; Regulatory Excellence
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
+        <div class="footer-col">
+          <h5>Technical Services</h5>
+          <div class="footer-links">
+            <a href="#hvac"><i class="bi bi-chevron-right"></i> HVAC &amp; Cleanroom Validation</a>
+            <a href="#thermal"><i class="bi bi-chevron-right"></i> Thermal Validation &amp; Mapping</a>
+            <a href="#pharma"><i class="bi bi-chevron-right"></i> Equipment Qualification (DQ-PQ)</a>
+            <a href="#util"><i class="bi bi-chevron-right"></i> Critical Utilities Validation</a>
+            <a href="#lifecycle"><i class="bi bi-chevron-right"></i> Validation Protocol Lifecycle</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Quick Navigation -->
+        <div class="footer-col">
+          <h5>Navigation</h5>
+          <div class="footer-links">
+            <a href="index.html"><i class="bi bi-chevron-right"></i> Home</a>
+            <a href="index.html#about"><i class="bi bi-chevron-right"></i> About Us</a>
+            <a href="index.html#services"><i class="bi bi-chevron-right"></i> Core Areas</a>
+            <a href="index.html#instruments"><i class="bi bi-chevron-right"></i> Instruments</a>
+            <a href="index.html#clients"><i class="bi bi-chevron-right"></i> Client Portfolio</a>
+            <a href="index.html#contact"><i class="bi bi-chevron-right"></i> Contact &amp; RFQ</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h5>Contact Information</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Block 13-A, Gulshan-e-Iqbal, Karachi, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:asim.hyderi@yahoo.com" style="color: inherit;">asim.hyderi@yahoo.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+923002608874" style="color: inherit;">+92 300 260 8874</a>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="https://wa.me/923002608874" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+              style="width: 100%;">
+              <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+            </a>
           </div>
         </div>
       </div>
 
-    </div>
-  </section>
-
-  <!-- Footer (Same as Index) -->
-  <footer>
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <h5>Prime Systems</h5>
-          <p>Your trusted partner in pharma validation since 2004.</p>
-          <p style="font-weight: 700; margin-top: 10px;">Committed To Quality & Excellence</p>
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2025 Prime Systems. All Rights Reserved. Designed for pharmaceutical engineering excellence.
         </div>
-        <div class="footer-col footer-links">
-          <h5>Services</h5>
-          <a href="#">HVAC/Environmental Validation</a>
-          <a href="#thermal">Thermal Validation & Mapping</a>
-          <a href="#pharma">Pharma Equipment Validation</a>
-          <a href="#util">Utilities Validation</a>
-        </div>
-        <div class="footer-col footer-links">
-          <h5>Useful Links</h5>
-          <a href="index.html">Home</a>
-          <a href="index.html#contact">Contact Us</a>
-        </div>
-        <div class="footer-col">
-          <h5>Contact</h5>
-          <p><i class="fas fa-envelope me-2"></i> asim.hyderi@yahoo.com</p>
-          <p><i class="fas fa-phone me-2"></i> + 92 300 260 8874</p>
-        </div>
-      </div>
-      <div class="copyright">
-        &copy; 2024 Prime Systems. All Rights Reserved.
+        <a href="#" id="backToTop" class="back-to-top-btn">
+          Back to top <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="main.js"></script>
   <script>
-    AOS.init({ once: true, duration: 800 });
+    AOS.init({
+      once: true,
+      duration: 700,
+      easing: 'ease-out-cubic'
+    });
   </script>
 </body>
 

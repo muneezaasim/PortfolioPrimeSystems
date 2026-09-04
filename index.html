@@ -4,442 +4,663 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prime Systems - Technical Services Provider</title>
+  <title>Prime Systems | Pharmaceutical Engineering & Validation Services</title>
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+  <!-- SEO Meta Tags -->
+  <meta name="description"
+    content="Prime Systems provides expert pharmaceutical qualification and validation services in Pakistan: HVAC cleanroom validation, thermal mapping, equipment DQ/IQ/OQ/PQ, and critical utilities testing compliant with WHO, ISO, and cGMP standards.">
+  <meta name="keywords"
+    content="pharma validation, HVAC validation Pakistan, cleanroom testing, thermal mapping, autoclave validation, DQ IQ OQ PQ, Asim Hyderi, Prime Systems">
+  <meta name="author" content="Prime Systems">
+  <meta name="theme-color" content="#0b3cb8">
+
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Prime Systems | Pharmaceutical Engineering & Validation Services">
+  <meta property="og:description"
+    content="Leading technical services provider in pharmaceutical engineering, cleanroom qualification, and thermal validation since 2004.">
+  <meta property="og:image" content="./assets/img/hero-bg.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="./assets/img/image-Photoroom.png-Photoroom.png">
+
+  <!-- Fonts: Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
     rel="stylesheet">
 
-  <!-- Icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Bootstrap Icons -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <!-- AOS Animation -->
+  <!-- AOS (Animate on Scroll) -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Slick Carousel -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css" />
-
-  <!-- Main CSS -->
-  <link href="main.css" rel="stylesheet">
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-  <!-- Preloader -->
-  <div id="preloader"
-    style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: #fff; z-index: 9999; display: flex; justify-content: center; align-items: center;">
-    <div
-      style="width: 40px; height: 40px; border: 4px solid #f3f3f3; border-top: 4px solid var(--primary-color, #0033cc); border-radius: 50%; animation: spin 1s linear infinite;">
-    </div>
-    <style>
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+  <!-- Preloader with fail-safe -->
+  <div id="preloader">
+    <div class="spinner"></div>
+    <span
+      style="font-size: 0.9rem; font-weight: 600; letter-spacing: 0.5px; color: var(--text-muted);">PRIME SYSTEMS</span>
   </div>
 
-  <!-- Header -->
+  <!-- Navigation Bar -->
   <header>
     <nav class="navbar">
       <div class="container nav-container">
-        <a href="index.html" class="logo-link">
-          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems" class="logo-brand">
+        <a href="index.html" class="brand-logo" aria-label="Prime Systems Home">
+          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems Logo" class="logo-img">
         </a>
 
-        <button class="burger-icon" onclick="toggleNavbar()" aria-label="Toggle navigation">
-          <i class="fas fa-bars"></i>
-        </button>
+        <!-- Desktop Menu -->
+        <div class="nav-menu">
+          <a href="#hero" class="nav-link">Home</a>
+          <a href="#about" class="nav-link">About Us</a>
+          <a href="#services" class="nav-link">Services</a>
+          <a href="#instruments" class="nav-link">Instruments</a>
+          <a href="#clients" class="nav-link">Clients</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </div>
 
-        <div class="headerA">
-          <a href="#hero" onclick="closeNavbar()">Home</a>
-          <a href="#about" onclick="closeNavbar()">About</a>
-          <a href="#services" onclick="closeNavbar()">Services</a>
-          <a href="#team" onclick="closeNavbar()">Team</a>
-          <a href="#instruments" onclick="closeNavbar()">Instruments</a>
-          <a href="#clients" onclick="closeNavbar()">Clients</a>
-          <a href="#contact" onclick="closeNavbar()">Contact</a>
+        <div class="nav-actions">
+          <a href="#contact" class="btn btn-primary btn-sm">
+            <i class="bi bi-chat-text-fill"></i> Get in Touch
+          </a>
+          <button class="mobile-toggle" aria-label="Toggle navigation drawer" aria-expanded="false">
+            <i class="bi bi-list"></i>
+          </button>
         </div>
       </div>
     </nav>
   </header>
 
+  <!-- Mobile Drawer & Backdrop -->
+  <div class="drawer-backdrop"></div>
+  <aside class="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems" class="drawer-logo">
+      <button class="drawer-close" aria-label="Close menu">
+        <i class="bi bi-x-lg"></i>
+      </button>
+    </div>
+    <nav class="drawer-nav">
+      <a href="#hero" class="drawer-link">Home <i class="bi bi-chevron-right"></i></a>
+      <a href="#about" class="drawer-link">About Us <i class="bi bi-chevron-right"></i></a>
+      <a href="#services" class="drawer-link">Services <i class="bi bi-chevron-right"></i></a>
+      <a href="#instruments" class="drawer-link">Instruments <i class="bi bi-chevron-right"></i></a>
+      <a href="#clients" class="drawer-link">Clients <i class="bi bi-chevron-right"></i></a>
+      <a href="#contact" class="drawer-link">Contact Us <i class="bi bi-chevron-right"></i></a>
+    </nav>
+    <div style="margin-top: auto;">
+      <a href="#contact" class="btn btn-primary" style="width: 100%; margin-bottom: 20px;">
+        <i class="bi bi-telephone-fill"></i> Request Consultation
+      </a>
+      <div style="font-size: 0.88rem; color: var(--text-muted);">
+        <p><i class="bi bi-envelope me-2"></i> asim.hyderi@yahoo.com</p>
+        <p style="margin-top: 6px;"><i class="bi bi-phone me-2"></i> +92 300 260 8874</p>
+      </div>
+    </div>
+  </aside>
+
   <!-- Hero Section -->
-  <section id="hero" class="hero">
-    <div class="container hero-content">
-      <h2 data-aos="fade-up">Welcome to Prime Systems</h2>
-      <p data-aos="fade-up" data-aos-delay="200">Prime Systems is a technical services provider, working mainly for
-        pharmaceutical manufacturing companies.</p>
-      <a href="#about" class="btn btn-primary" data-aos="fade-up" data-aos-delay="400">Discover More</a>
+  <section id="hero" class="hero-section">
+    <div class="hero-glow-blob"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge" data-aos="fade-down">
+          <span class="hero-badge-dot"></span>
+          <span>PHARMACEUTICAL VALIDATION &amp; ENGINEERING &bull; EST. 2004</span>
+        </div>
+        <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+          Precision Validation for <span class="gradient-text">Regulated Pharma</span> Manufacturing
+        </h1>
+        <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+          Providing full-scope qualification, cleanroom environmental validation, thermal mapping, and critical
+          utilities verification strictly complying with WHO, ISO 14644, MCC, and cGMP international standards.
+        </p>
+        <div class="hero-cta-group" data-aos="fade-up" data-aos-delay="300">
+          <a href="#services" class="btn btn-primary">
+            Explore Services <i class="bi bi-arrow-right"></i>
+          </a>
+          <a href="#contact" class="btn btn-glass">
+            <i class="bi bi-calendar2-check"></i> Request Consultation
+          </a>
+        </div>
+
+        <!-- KPI Stats Bar -->
+        <div class="hero-stats-grid" data-aos="fade-up" data-aos-delay="400">
+          <div class="stat-item">
+            <div class="stat-number">
+              <span class="stat-count" data-target="20">20</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Years of Excellence</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">
+              <span class="stat-count" data-target="100">100</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Facilities Validated</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">
+              <span class="stat-count" data-target="10">10</span><span class="stat-plus">+</span>
+            </div>
+            <div class="stat-label">Top Pharma Clients</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number">
+              <span>100</span><span class="stat-plus">%</span>
+            </div>
+            <div class="stat-label">cGMP &amp; WHO Compliance</div>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- About Section -->
-  <section id="about" class="section-padding about">
+  <!-- Client Logos Showcase (Pure CSS Infinite Marquee) -->
+  <section id="clients" class="clients-section">
+    <div class="container">
+      <div class="clients-intro">
+        <p>Trusted by Leading Global &amp; National Pharmaceutical Manufacturers</p>
+      </div>
+    </div>
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <!-- Set 1 -->
+        <div class="client-item"><img src="./clients/pfizer.png" alt="Pfizer"></div>
+        <div class="client-item"><img src="./clients/GSK.png" alt="GlaxoSmithKline (GSK)"></div>
+        <div class="client-item"><img src="./clients/bosch.jpeg" alt="Bosch Pharmaceuticals"></div>
+        <div class="client-item"><img src="./clients/Searl.png" alt="The Searle Company"></div>
+        <div class="client-item"><img src="./clients/Sami.png" alt="Sami Pharmaceuticals"></div>
+        <div class="client-item"><img src="./clients/AGP.jpg" alt="AGP Pharma"></div>
+        <div class="client-item"><img src="./clients/Atco.png" alt="Atco Laboratories"></div>
+        <div class="client-item"><img src="./clients/luckycore.png" alt="Lucky Core Industries (ICI Pakistan)"></div>
+        <div class="client-item"><img src="./clients/indus.jpeg" alt="Indus Pharma"></div>
+        <div class="client-item"><img src="./clients/linz.jpeg" alt="Linz Pharmaceuticals"></div>
+
+        <!-- Set 2 (Seamless loop duplicate) -->
+        <div class="client-item"><img src="./clients/pfizer.png" alt="Pfizer"></div>
+        <div class="client-item"><img src="./clients/GSK.png" alt="GlaxoSmithKline (GSK)"></div>
+        <div class="client-item"><img src="./clients/bosch.jpeg" alt="Bosch Pharmaceuticals"></div>
+        <div class="client-item"><img src="./clients/Searl.png" alt="The Searle Company"></div>
+        <div class="client-item"><img src="./clients/Sami.png" alt="Sami Pharmaceuticals"></div>
+        <div class="client-item"><img src="./clients/AGP.jpg" alt="AGP Pharma"></div>
+        <div class="client-item"><img src="./clients/Atco.png" alt="Atco Laboratories"></div>
+        <div class="client-item"><img src="./clients/luckycore.png" alt="Lucky Core Industries (ICI Pakistan)"></div>
+        <div class="client-item"><img src="./clients/indus.jpeg" alt="Indus Pharma"></div>
+        <div class="client-item"><img src="./clients/linz.jpeg" alt="Linz Pharmaceuticals"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Leadership Authority Section -->
+  <section id="about" class="section-padding about-section">
     <div class="container">
       <div class="about-grid">
+        <!-- Text Left -->
         <div class="about-text" data-aos="fade-right">
-          <h3>About Us</h3>
-          <h2>Committed to Quality & Excellence</h2>
-          <p>Since its start in 2004, Prime Systems has developed considerable clientele in the Pharma industry and is
-            providing validation and technical services to reputable pharmaceutical companies.</p>
-          <p>All efforts at Prime Systems are focused on providing quality services that enable its clients to achieve a
-            high level of compliance in a cost-effective manner.</p>
-        </div>
-        <div class="about-image" data-aos="fade-left">
-          <img src="assets/aboutus-removebg.png" alt="About Prime Systems">
-        </div>
-      </div>
-
-      <!-- Core Areas (Flip Cards) -->
-      <div class="section-header" data-aos="fade-up">
-        <h2>Our Main Areas</h2>
-      </div>
-
-      <div class="areas-grid">
-        <!-- Card 1 -->
-        <div class="area-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="area-card-inner">
-            <div class="area-front">
-              <i class="bi bi-gear-wide-connected"
-                style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-              <h3>VALIDATION</h3>
-              <button class="rdmore">Read More</button>
-            </div>
-            <div class="area-back">
-              <p>VALIDATION OF PHARMA PRODUCTION EQUIPMENT</p>
-            </div>
+          <div class="section-tag">
+            <i class="bi bi-shield-check"></i> Proven Quality Since 2004
           </div>
-        </div>
+          <h2>Uncompromising Compliance for Regulated Industries</h2>
+          <p>
+            Established in 2004, Prime Systems has evolved into one of Pakistan's most respected validation and
+            technical engineering consultancies. We assist multinational and domestic pharmaceutical companies in
+            achieving seamless audit readiness and high-grade cGMP compliance.
+          </p>
+          <p>
+            All protocols, testing procedures, and qualification packages developed by Prime Systems strictly adhere to
+            the world's most stringent regulatory standards, ensuring your facilities, machinery, and utilities meet
+            both local and international export audit benchmarks.
+          </p>
 
-        <!-- Card 2 -->
-        <div class="area-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="area-card-inner">
-            <div class="area-front">
-              <i class="bi bi-wind" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-              <h3>ENVIRONMENTAL</h3>
-              <button class="rdmore">Read More</button>
-            </div>
-            <div class="area-back">
-              <p>ENVIRONMENTAL VALIDATION INCLUDING AIR BALANCING, FILTER INTEGRITY TESTING, PARTICLE COUNTS & AIR FLOW
-                PATTERN TESTS</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 3 -->
-        <div class="area-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="area-card-inner">
-            <div class="area-front">
-              <i class="bi bi-thermometer-high"
-                style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-              <h3>THERMAL VALIDATION</h3>
-              <button class="rdmore">Read More</button>
-            </div>
-            <div class="area-back">
-              <p>THERMAL VALIDATION OF STERILIZERS INCLUDING AUTOCLAVES, DHS & TUNNELS</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 4 -->
-        <div class="area-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="area-card-inner">
-            <div class="area-front">
-              <i class="bi bi-grid-3x3" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 20px;"></i>
-              <h3>THERMAL MAPPING</h3>
-              <button class="rdmore">Read More</button>
-            </div>
-            <div class="area-back">
-              <p>THERMAL MAPPING OF STORAGE AREAS</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- Services Section -->
-  <section id="services" class="section-padding services">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2>Our Services</h2>
-        <p>We offer a range of services to help you with your project, always looking for ways to improve our service
-          and make it more efficient.</p>
-      </div>
-
-      <div class="services-grid">
-        <!-- Service 1 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-          <div class="service-header">
-            HVAC / ENVIRONMENTAL VALIDATION SERVICES
-          </div>
-          <div class="service-body">
-            <p>We provide complete services for validation and qualification of HVAC systems and controlled environments
-              to comply with cGMP requirements.</p>
-            <a href="Services.html" class="btn btn-outline"
-              style="color: var(--primary-color); border-color: var(--primary-color);">Read More</a>
-          </div>
-        </div>
-
-        <!-- Service 2 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-          <div class="service-header">
-            THERMAL VALIDATION & TEMP MAPPING
-          </div>
-          <div class="service-body">
-            <p>We provide complete services for thermal validation of sterilizers and temperature mapping of controlled
-              temperature storage equipment and storage areas.</p>
-            <a href="Services.html#thermal" class="btn btn-outline"
-              style="color: var(--primary-color); border-color: var(--primary-color);">Read More</a>
-          </div>
-        </div>
-
-        <!-- Service 3 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-          <div class="service-header">
-            VALIDATION SERVICES FOR PHARMA EQUIPMENT
-          </div>
-          <div class="service-body">
-            <p>We provide complete services for validation of pharmaceutical production equipment.</p>
-            <a href="Services.html#pharma" class="btn btn-outline"
-              style="color: var(--primary-color); border-color: var(--primary-color);">Read More</a>
-          </div>
-        </div>
-
-        <!-- Service 4 -->
-        <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-          <div class="service-header">
-            VALIDATION SERVICES FOR UTILITIES
-          </div>
-          <div class="service-body">
-            <p>We provide complete services for validation of utilities systems.</p>
-            <a href="Services.html#util" class="btn btn-outline"
-              style="color: var(--primary-color); border-color: var(--primary-color);">Read More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Team/Founder Section -->
-  <section id="team" class="section-padding team">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2>Meet Our Founder</h2>
-      </div>
-
-      <div class="founder-content" data-aos="fade-up">
-        <!-- Image removed as requested -->
-        <div class="founder-info">
-          <h3 class="founder-name">Asim Hyderi</h3>
-          <p class="founder-role">Founder & Principal</p>
-
-          <div class="founder-detail">
-            <p>Mr. Asim Hyderi brings over 30 years of extensive experience in pharma engineering and validation to
-              Prime Systems. With a background in Mechanical Engineering from N.E.D University and numerous specialized
-              trainings, he has held key leadership positions in multinational pharmaceuticals for over a decade.</p>
+          <!-- Compliance Badges -->
+          <div class="compliance-chips">
+            <div class="chip-item"><i class="bi bi-check-circle-fill"></i> WHO TRS Guidelines</div>
+            <div class="chip-item"><i class="bi bi-check-circle-fill"></i> ISO 14644 Cleanroom Classifications</div>
+            <div class="chip-item"><i class="bi bi-check-circle-fill"></i> MCC South Africa</div>
+            <div class="chip-item"><i class="bi bi-check-circle-fill"></i> EU cGMP Annex 1</div>
+            <div class="chip-item"><i class="bi bi-check-circle-fill"></i> ISO 8573 Compressed Air</div>
           </div>
 
-          <div class="founder-detail">
-            <h5>Professional Journey</h5>
-            <p>Mr. Asim has served as Head of Engineering in multinational pharmaceuticals for over 10 years before
-              establishing Prime Systems, where he has been the Principal for over 15 years. His expertise spans
-              compliance with standards of WHO, MCC of South Africa, ISO, and corporate standards of multinational
-              companies.</p>
-          </div>
-
-          <div class="founder-detail">
-            <h5>Expertise</h5>
-            <p>Throughout his career, Mr. Asim has focused on pharma validation, developing and executing comprehensive
-              validation protocols across all areas of pharmaceutical manufacturing.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Instruments Section -->
-  <section id="instruments" class="section-padding instruments">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2>Instruments & Equipment</h2>
-        <p>State-of-the-art instruments used in our validation services</p>
-      </div>
-
-      <div class="instruments-grid">
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="100">
-          <img src="./instruments/thermocouple.jpg" alt="Thermocouple">
-          <h3>PC based mutlichannel thermocouple data logger</h3>
-          <p>Used for thermal validation of sterilizers</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="200">
-          <img src="./instruments/temperature.png" alt="Temp Datalogger">
-          <h3>Temperature & RH dataloggers</h3>
-          <p>Used for Temperature and RH mapping</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="300">
-          <img src="./instruments/Temp_datalogger.png" alt="Temp Datalogger">
-          <h3>Temperature dataloggers</h3>
-          <p>Used for temperature mapping</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="400">
-          <img src="./instruments/photometer.png" alt="Photometer">
-          <h3>Aerosol Photometer</h3>
-          <p>Used for integrity testing of HEPA filters</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="500">
-          <img src="./instruments/manometer.jpg" alt="Manometer">
-          <h3>Digital Manometer</h3>
-          <p>Used for Pressure differential & static pressure measurements</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="600">
-          <img src="./instruments/generator.jpg" alt="Generator">
-          <h3>Aerosol Generator</h3>
-          <p>Used for integrity testing of HEPA filters</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="700">
-          <img src="./instruments/airflowbag.png" alt="Capture Hood">
-          <h3>Air Flow Capture Hood</h3>
-          <p>Used for air balancing & air flow measurements</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="800">
-          <img src="./instruments/airvelocity.png" alt="Velocity Meter">
-          <h3>Air Velocity Meter</h3>
-          <p>Used for air velocity & air flow measurements</p>
-        </div>
-        <div class="instrument-card" data-aos="zoom-in" data-aos-delay="900">
-          <img src="./instruments/portable_particle.png" alt="Particle Counter">
-          <h3>Handheld Laser Particle Counter</h3>
-          <p>Used for measuring particle counts</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Clients Section -->
-  <section id="clients" class="clients">
-    <div class="container">
-      <div class="section-header">
-        <h2>Our Satisfied Clients</h2>
-      </div>
-      <div class="slider client-slider">
-        <div class="slide"><img src="./clients/AGP.jpg" alt="Client"></div>
-        <div class="slide"><img src="./clients/Atco.png" alt="Client"></div>
-        <div class="slide"><img src="./clients/bosch.jpeg" alt="Client"></div>
-        <div class="slide"><img src="./clients/GSK.png" alt="Client"></div>
-        <div class="slide"><img src="./clients/indus.jpeg" alt="Client"></div>
-        <div class="slide"><img src="./clients/linz.jpeg" alt="Client"></div>
-        <div class="slide"><img src="./clients/luckycore.png" alt="Client"></div>
-        <div class="slide"><img src="./clients/pfizer.png" alt="Client"></div>
-        <div class="slide"><img src="./clients/Sami.png" alt="Client"></div>
-        <div class="slide"><img src="./clients/Searl.png" alt="Client"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section-padding contact">
-    <div class="container">
-      <div class="section-header" data-aos="fade-up">
-        <h2>Contact Us</h2>
-      </div>
-      <div class="contact-wrapper" data-aos="fade-up">
-        <div class="contact-info">
-          <h3>Get in Touch</h3>
-          <p>"We are dedicated to exceeding client expectations, ensuring satisfaction with our exceptional services.
-            Our commitment is to deliver the utmost quality, striving to excel in every endeavor. Trust us to go above
-            and beyond, consistently providing our best effort to meet your needs."</p>
           <div style="margin-top: 30px;">
-            <p><i class="fas fa-home me-2"></i> Block 13-A, Gulshan-e-Iqbal, Karachi</p>
-            <p><i class="fas fa-envelope me-2"></i> asim.hyderi@yahoo.com</p>
-            <p><i class="fas fa-phone me-2"></i> + 92 300 260 8874</p>
+            <a href="Services.html" class="btn btn-secondary">
+              View All Technical Protocols <i class="bi bi-arrow-right"></i>
+            </a>
           </div>
         </div>
-        <!-- Form removed as requested -->
+
+        <!-- Founder Spotlight Right -->
+        <div class="founder-card" data-aos="fade-left">
+          <span class="founder-badge">Executive Leadership</span>
+          <h3 class="founder-name">Asim Hyderi</h3>
+          <p class="founder-title">Founder &amp; Principal Validation Consultant</p>
+
+          <p class="founder-quote">
+            "All efforts at Prime Systems are focused on delivering rigorous, audit-ready validation that enables
+            pharmaceutical manufacturers to achieve uncompromised compliance in a cost-effective, dependable manner."
+          </p>
+
+          <div class="founder-credentials">
+            <div class="cred-item">
+              <i class="bi bi-mortarboard-fill"></i>
+              <span>B.E. Mechanical Engineering &mdash; N.E.D. University</span>
+            </div>
+            <div class="cred-item">
+              <i class="bi bi-briefcase-fill"></i>
+              <span>Former Head of Engineering in Multinational Pharma (10+ Years)</span>
+            </div>
+            <div class="cred-item">
+              <i class="bi bi-award-fill"></i>
+              <span>30+ Years Overall Pharma Engineering &amp; Validation Experience</span>
+            </div>
+            <div class="cred-item">
+              <i class="bi bi-patch-check-fill"></i>
+              <span>Specialist in WHO, MCC, ISO &amp; Corporate Multinational Standards</span>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
-  <footer>
+  <!-- Core Services Bento Grid -->
+  <section id="services" class="section-padding services-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">
+          <i class="bi bi-layers-fill"></i> Engineering Capabilities
+        </div>
+        <h2>Our Core Validation Domains</h2>
+        <p>Comprehensive qualification solutions tailored to sterile, oral solid dosage, and biotechnology manufacturing plants.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Card 1: HVAC (Span 7) -->
+        <div class="bento-card bento-col-7" data-aos="fade-up" data-aos-delay="100">
+          <div class="card-icon-box">
+            <i class="bi bi-wind"></i>
+          </div>
+          <h3 class="card-title">HVAC &amp; Cleanroom Environmental Validation</h3>
+          <p class="card-desc">
+            Complete qualification and certification of HVAC systems and controlled environments in compliance with ISO
+            14644 and cGMP regulations.
+          </p>
+          <ul class="card-highlights">
+            <li><i class="bi bi-check2"></i> Air Balancing &amp; Airflow Measurement (Capture Hoods &amp; Anemometers)</li>
+            <li><i class="bi bi-check2"></i> HEPA Filter Integrity Testing (Aerosol Photometer &amp; Generator)</li>
+            <li><i class="bi bi-check2"></i> Room Differential Pressure Balancing &amp; Room Clean-up Recovery</li>
+            <li><i class="bi bi-check2"></i> Airborne Particle Counts (ISO 14644-1 Classes 5 through 8)</li>
+            <li><i class="bi bi-check2"></i> Airflow Pattern Visualization (Smoke Studies with Video Documentation)</li>
+          </ul>
+          <a href="Services.html#hvac" class="card-link">
+            Explore Cleanroom Services <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 2: Thermal Validation (Span 5) -->
+        <div class="bento-card bento-col-5" data-aos="fade-up" data-aos-delay="200">
+          <div class="card-icon-box">
+            <i class="bi bi-thermometer-half"></i>
+          </div>
+          <h3 class="card-title">Thermal Validation &amp; Mapping</h3>
+          <p class="card-desc">
+            Precise thermal qualification of critical sterilization equipment and temperature/humidity mapping of
+            controlled storage zones.
+          </p>
+          <ul class="card-highlights">
+            <li><i class="bi bi-check2"></i> Autoclaves &amp; Super-Heated Water Sterilizers</li>
+            <li><i class="bi bi-check2"></i> Dry Heat Sterilizers &amp; Depyrogenation Tunnels</li>
+            <li><i class="bi bi-check2"></i> Cold Storage Rooms (2&ndash;8&deg;C) &amp; Deep Freezers (-20&deg;C)</li>
+            <li><i class="bi bi-check2"></i> Systematic Warehouse Temperature Mapping</li>
+          </ul>
+          <a href="Services.html#thermal" class="card-link">
+            Explore Thermal Protocols <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 3: Pharma Equipment (Span 5) -->
+        <div class="bento-card bento-col-5" data-aos="fade-up" data-aos-delay="300">
+          <div class="card-icon-box">
+            <i class="bi bi-gear-wide-connected"></i>
+          </div>
+          <h3 class="card-title">Pharma Equipment Qualification</h3>
+          <p class="card-desc">
+            Standardized lifecycle qualification documentation (DQ, IQ, OQ, PQ) for primary and secondary production
+            machinery.
+          </p>
+          <ul class="card-highlights">
+            <li><i class="bi bi-check2"></i> Design Qualification (DQ) Verification</li>
+            <li><i class="bi bi-check2"></i> Installation Qualification (IQ) Protocol &amp; Execution</li>
+            <li><i class="bi bi-check2"></i> Operational Qualification (OQ) Parameter Testing</li>
+            <li><i class="bi bi-check2"></i> Performance Qualification (PQ) Batch Verification</li>
+          </ul>
+          <a href="Services.html#pharma" class="card-link">
+            Explore Equipment DQ-PQ <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+
+        <!-- Card 4: Utilities Validation (Span 7) -->
+        <div class="bento-card bento-col-7" data-aos="fade-up" data-aos-delay="400">
+          <div class="card-icon-box">
+            <i class="bi bi-droplet-half"></i>
+          </div>
+          <h3 class="card-title">Critical Utilities Validation</h3>
+          <p class="card-desc">
+            Verification of clean manufacturing utilities ensuring uninterrupted compliance, purity, and safety
+            throughout the production cycle.
+          </p>
+          <ul class="card-highlights">
+            <li><i class="bi bi-check2"></i> Compressed Air Systems Testing (ISO 8573 Moisture, Oil &amp; Particulates)</li>
+            <li><i class="bi bi-check2"></i> Boiler &amp; Clean Steam Quality Testing (Non-condensable Gases &amp; Dryness)</li>
+            <li><i class="bi bi-check2"></i> Purified Water Generation, Storage &amp; Distribution Loops (USP/EP Standards)</li>
+          </ul>
+          <a href="Services.html#util" class="card-link">
+            Explore Utilities Validation <i class="bi bi-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Precision Instruments Showcase -->
+  <section id="instruments" class="section-padding instruments-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <div class="section-tag">
+          <i class="bi bi-tools"></i> Traceable Calibration
+        </div>
+        <h2>Precision Instruments &amp; Equipment</h2>
+        <p>
+          Our field tests are executed exclusively with state-of-the-art, NIST-traceable calibrated instruments to
+          guarantee verifiable audit accuracy.
+        </p>
+      </div>
+
+      <!-- Filter Tabs -->
+      <div class="instruments-tabs" data-aos="fade-up">
+        <button class="tab-btn active" data-filter="all">All Instruments</button>
+        <button class="tab-btn" data-filter="cleanroom">Cleanroom &amp; Airflow</button>
+        <button class="tab-btn" data-filter="thermal">Thermal &amp; Datalogging</button>
+        <button class="tab-btn" data-filter="pressure">Pressure &amp; Differential</button>
+      </div>
+
+      <!-- Instruments Grid -->
+      <div class="instruments-grid" data-aos="fade-up">
+        <!-- 1: Photometer -->
+        <div class="instrument-card" data-category="cleanroom">
+          <span class="inst-badge">Cleanroom</span>
+          <div class="inst-img-box">
+            <img src="./instruments/photometer.png" alt="Aerosol Photometer" loading="lazy">
+          </div>
+          <h3 class="inst-name">Aerosol Photometer</h3>
+          <p class="inst-desc">Used for in-situ leak detection and integrity testing of installed HEPA filters.</p>
+        </div>
+
+        <!-- 2: Generator -->
+        <div class="instrument-card" data-category="cleanroom">
+          <span class="inst-badge">Cleanroom</span>
+          <div class="inst-img-box">
+            <img src="./instruments/generator.jpg" alt="Aerosol Generator" loading="lazy">
+          </div>
+          <h3 class="inst-name">Aerosol Generator</h3>
+          <p class="inst-desc">Generates poly-dispersed PAO/DOP aerosol challenge for HEPA filter efficiency testing.</p>
+        </div>
+
+        <!-- 3: Particle Counter -->
+        <div class="instrument-card" data-category="cleanroom">
+          <span class="inst-badge">Cleanroom</span>
+          <div class="inst-img-box">
+            <img src="./instruments/portable_particle.png" alt="Laser Particle Counter" loading="lazy">
+          </div>
+          <h3 class="inst-name">Handheld Laser Particle Counter</h3>
+          <p class="inst-desc">High-precision optical counter for measuring airborne particulate concentrations per ISO 14644-1.</p>
+        </div>
+
+        <!-- 4: Airflow Capture Hood -->
+        <div class="instrument-card" data-category="cleanroom">
+          <span class="inst-badge">Cleanroom</span>
+          <div class="inst-img-box">
+            <img src="./instruments/airflowbag.png" alt="Air Flow Capture Hood" loading="lazy">
+          </div>
+          <h3 class="inst-name">Air Flow Capture Hood</h3>
+          <p class="inst-desc">Direct volumetric airflow measurement for air balancing and room air changes per hour (ACPH).</p>
+        </div>
+
+        <!-- 5: Air Velocity Meter -->
+        <div class="instrument-card" data-category="cleanroom">
+          <span class="inst-badge">Cleanroom</span>
+          <div class="inst-img-box">
+            <img src="./instruments/airvelocity.png" alt="Air Velocity Meter" loading="lazy">
+          </div>
+          <h3 class="inst-name">Air Velocity Meter (Anemometer)</h3>
+          <p class="inst-desc">Measures laminar flow face velocity across clean workbenches, biosafety cabinets, and LAF hoods.</p>
+        </div>
+
+        <!-- 6: Thermocouple Logger -->
+        <div class="instrument-card" data-category="thermal">
+          <span class="inst-badge">Thermal</span>
+          <div class="inst-img-box">
+            <img src="./instruments/thermocouple.jpg" alt="Multichannel Thermocouple Logger" loading="lazy">
+          </div>
+          <h3 class="inst-name">PC-Based Multichannel Logger</h3>
+          <p class="inst-desc">Real-time multi-point temperature data acquisition for sterilizers, autoclaves, and dry heat tunnels.</p>
+        </div>
+
+        <!-- 7: Temp & RH Dataloggers -->
+        <div class="instrument-card" data-category="thermal">
+          <span class="inst-badge">Thermal</span>
+          <div class="inst-img-box">
+            <img src="./instruments/temperature.png" alt="Temperature and Humidity Datalogger" loading="lazy">
+          </div>
+          <h3 class="inst-name">Temperature &amp; RH Dataloggers</h3>
+          <p class="inst-desc">Multi-zone mapping of stability chambers, incubators, cold rooms (2&ndash;8&deg;C), and warehouses.</p>
+        </div>
+
+        <!-- 8: Mini Temp Datalogger -->
+        <div class="instrument-card" data-category="thermal">
+          <span class="inst-badge">Thermal</span>
+          <div class="inst-img-box">
+            <img src="./instruments/Temp_datalogger.png" alt="Temperature Datalogger" loading="lazy">
+          </div>
+          <h3 class="inst-name">Compact Temperature Dataloggers</h3>
+          <p class="inst-desc">Autonomous high-accuracy sensors for continuous thermal profile monitoring in confined storage.</p>
+        </div>
+
+        <!-- 9: Digital Manometer -->
+        <div class="instrument-card" data-category="pressure">
+          <span class="inst-badge">Pressure</span>
+          <div class="inst-img-box">
+            <img src="./instruments/manometer.jpg" alt="Digital Manometer" loading="lazy">
+          </div>
+          <h3 class="inst-name">Digital Differential Manometer</h3>
+          <p class="inst-desc">Measures room pressure cascades, HEPA filter resistance, and cleanroom enclosure integrity.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Consultation & Direct Contact Hub -->
+  <section id="contact" class="section-padding contact-section">
+    <div class="container">
+      <div class="contact-hub-wrapper" data-aos="fade-up">
+        <!-- Hero Header -->
+        <div class="hub-hero-banner">
+          <div class="section-tag tag-dark" style="margin-bottom: 16px;">
+            <i class="bi bi-headset"></i> Immediate Direct Support
+          </div>
+          <h3>Speak Directly with our Senior Engineers</h3>
+          <p>
+            Whether you require urgent audit readiness, annual cleanroom certification, autoclave re-qualification, or complete plant validation, connect directly with our engineering consultants for immediate guidance.
+          </p>
+        </div>
+
+        <!-- 3 Direct Channels Grid -->
+        <div class="hub-channels-grid">
+          <!-- Channel 1: WhatsApp -->
+          <div class="channel-card channel-whatsapp" data-aos="fade-up" data-aos-delay="100">
+            <div class="channel-icon">
+              <i class="bi bi-whatsapp"></i>
+            </div>
+            <h4>Instant WhatsApp Chat</h4>
+            <p>Connect immediately on WhatsApp to share protocols, floor layouts, or schedule upcoming shutdown testing.</p>
+            <div class="channel-action">
+              <a href="https://wa.me/923002608874" target="_blank" rel="noopener" class="btn btn-whatsapp">
+                <i class="bi bi-whatsapp"></i> Chat with Consultant
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 2: Direct Phone -->
+          <div class="channel-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="channel-icon">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <h4>Direct Phone Call</h4>
+            <p>Speak directly with Principal Consultant Asim Hyderi for immediate technical discussion and plant consultations.</p>
+            <div class="channel-action">
+              <a href="tel:+923002608874" class="btn btn-primary">
+                <i class="bi bi-telephone-outbound-fill"></i> +92 300 260 8874
+              </a>
+            </div>
+          </div>
+
+          <!-- Channel 3: Official Email -->
+          <div class="channel-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="channel-icon">
+              <i class="bi bi-envelope-fill"></i>
+            </div>
+            <h4>Official Technical Email</h4>
+            <p>Send formal RFQs, vendor qualification dossiers, URS documentation, or plant validation proposals.</p>
+            <div class="channel-action">
+              <a href="mailto:asim.hyderi@yahoo.com?subject=Validation%20Consultation%20Inquiry%20-%20Prime%20Systems" class="btn btn-secondary">
+                <i class="bi bi-envelope-paper-fill"></i> Send Email Inquiry
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hub Bottom Bar: Location & Trust Assurances -->
+        <div class="hub-bottom-bar">
+          <div class="hub-location">
+            <div class="hub-loc-icon">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="hub-loc-text">
+              <h5>Engineering Head Office</h5>
+              <p>Block 13-A, Gulshan-e-Iqbal, Karachi, Pakistan</p>
+            </div>
+          </div>
+
+          <div class="hub-badges">
+            <span class="hub-badge-item">
+              <i class="bi bi-shield-check"></i> Strict NDA Confidentiality
+            </span>
+            <span class="hub-badge-item">
+              <i class="bi bi-clock-history"></i> Rapid 24-Hour Response
+            </span>
+            <span class="hub-badge-item">
+              <i class="bi bi-award"></i> Audit-Ready Documentation
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
+        <!-- Col 1: Brand -->
+        <div class="footer-brand">
+          <img src="./assets/img/image-Photoroom.png-Photoroom.png" alt="Prime Systems Logo" class="logo-img">
+          <p class="footer-desc">
+            Your dedicated technical services provider for pharmaceutical manufacturing since 2004. Specializing in
+            cleanroom environmental validation, thermal mapping, equipment qualification, and utilities testing.
+          </p>
+          <div style="color: var(--accent-cyan-light); font-weight: 700; font-size: 0.92rem;">
+            Committed to Quality &amp; Regulatory Excellence
+          </div>
+        </div>
+
+        <!-- Col 2: Services -->
         <div class="footer-col">
-          <h5>Prime Systems</h5>
-          <p>Your trusted partner in pharma validation since 2004. Specializing in equipment validation, environmental
-            testing, and thermal mapping for reputable pharmaceutical companies.</p>
-          <p style="font-weight: 700; margin-top: 10px;">Committed To Quality & Excellence</p>
+          <h5>Technical Services</h5>
+          <div class="footer-links">
+            <a href="Services.html#hvac"><i class="bi bi-chevron-right"></i> HVAC &amp; Cleanroom Validation</a>
+            <a href="Services.html#thermal"><i class="bi bi-chevron-right"></i> Thermal Validation &amp; Mapping</a>
+            <a href="Services.html#pharma"><i class="bi bi-chevron-right"></i> Equipment Qualification (DQ-PQ)</a>
+            <a href="Services.html#util"><i class="bi bi-chevron-right"></i> Critical Utilities Validation</a>
+            <a href="Services.html#lifecycle"><i class="bi bi-chevron-right"></i> Validation Protocol Lifecycle</a>
+          </div>
         </div>
-        <div class="footer-col footer-links">
-          <h5>Services</h5>
-          <a href="Services.html">HVAC/Environmental Validation</a>
-          <a href="Services.html#thermal">Thermal Validation & Mapping</a>
-          <a href="Services.html#pharma">Pharma Equipment Validation</a>
-          <a href="Services.html#util">Utilities Validation</a>
-        </div>
-        <div class="footer-col footer-links">
-          <h5>Useful Links</h5>
-          <a href="#about">About us</a>
-          <a href="#services">Services</a>
-          <a href="#clients">Clients</a>
-          <a href="#contact">Contact Us</a>
-        </div>
+
+        <!-- Col 3: Quick Navigation -->
         <div class="footer-col">
-          <h5>Contact</h5>
-          <p><i class="fas fa-home me-2"></i> Gulshan-e-Iqbal, Karachi</p>
-          <p><i class="fas fa-envelope me-2"></i> asim.hyderi@yahoo.com</p>
-          <p><i class="fas fa-phone me-2"></i> + 92 300 260 8874</p>
+          <h5>Navigation</h5>
+          <div class="footer-links">
+            <a href="#hero"><i class="bi bi-chevron-right"></i> Home</a>
+            <a href="#about"><i class="bi bi-chevron-right"></i> About Us</a>
+            <a href="#services"><i class="bi bi-chevron-right"></i> Core Areas</a>
+            <a href="#instruments"><i class="bi bi-chevron-right"></i> Instruments</a>
+            <a href="#clients"><i class="bi bi-chevron-right"></i> Client Portfolio</a>
+            <a href="#contact"><i class="bi bi-chevron-right"></i> Contact &amp; RFQ</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Contact -->
+        <div class="footer-col">
+          <h5>Contact Information</h5>
+          <div class="footer-contact-item">
+            <i class="bi bi-geo-alt-fill"></i>
+            <span>Block 13-A, Gulshan-e-Iqbal, Karachi, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-envelope-fill"></i>
+            <a href="mailto:asim.hyderi@yahoo.com" style="color: inherit;">asim.hyderi@yahoo.com</a>
+          </div>
+          <div class="footer-contact-item">
+            <i class="bi bi-telephone-fill"></i>
+            <a href="tel:+923002608874" style="color: inherit;">+92 300 260 8874</a>
+          </div>
+          <div style="margin-top: 16px;">
+            <a href="https://wa.me/923002608874" target="_blank" rel="noopener" class="btn btn-secondary btn-sm"
+              style="width: 100%;">
+              <i class="bi bi-whatsapp"></i> Chat on WhatsApp
+            </a>
+          </div>
         </div>
       </div>
-      <div class="copyright">
-        &copy; 2025 Prime Systems. All Rights Reserved.
+
+      <!-- Bottom Bar -->
+      <div class="footer-bottom">
+        <div>
+          &copy; 2025 Prime Systems. All Rights Reserved. Designed for pharmaceutical engineering excellence.
+        </div>
+        <a href="#hero" id="backToTop" class="back-to-top-btn">
+          Back to top <i class="bi bi-arrow-up-circle-fill"></i>
+        </a>
       </div>
     </div>
   </footer>
 
   <!-- Scripts -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="main.js"></script>
   <script>
+    // Initialize Animate On Scroll
     AOS.init({
       once: true,
-      duration: 800
-    });
-
-    // Slick Slider Config
-    $('.slider').slick({
-      dots: true,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 4,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 2000,
-      responsive: [
-        {
-          breakpoint: 1024,
-          settings: { slidesToShow: 3, slidesToScroll: 1 }
-        },
-        {
-          breakpoint: 768,
-          settings: { slidesToShow: 2, slidesToScroll: 1 }
-        },
-        {
-          breakpoint: 480,
-          settings: { slidesToShow: 1, slidesToScroll: 1 }
-        }
-      ]
+      duration: 700,
+      easing: 'ease-out-cubic'
     });
   </script>
 </body>
